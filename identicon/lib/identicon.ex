@@ -19,7 +19,6 @@ defmodule Identicon do
   def draw_image(%{color: color, grid: grid}) do
     image = :egd.create(250, 250)
     fill = :egd.color(color)
-    IO.inspect(grid, charlists: :as_list)
     Enum.each grid, fn(%{:start_point => start_point, :end_point => end_point}) -> 
       :egd.filledRectangle(image, start_point, end_point, fill)
     end
