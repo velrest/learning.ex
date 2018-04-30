@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres:latest"
+    ports:
+     - "5432:5432"
+    environment:
+      POSTGRES_DB: discuss_dev
+      
+  adminer:
+      image: "adminer:latest"
+      ports:
+        - 8080:8080
